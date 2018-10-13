@@ -128,9 +128,10 @@
 # find
 1，查看 /var 目录下属主为 root，且属组为 mail 的所以文件  
 `  find /var -user root -group mail `     
-2，查看 /var 目录下不属于 root ，gdm 的所有文件 
+2，查看 /var 目录下不属于 root ，gdm 的所有文件     
  ` find /var -not \( -user root -a -user gdm -a -group root -a -group gdm  \) `    
-3，查找/var目录下最近一周内其内容修改过,同时属主不为root ,也不是 postfix的文件  ` find /etc  -not \( -group root -a -group postfix \) -mtime -7`    
+3，查找/var目录下最近一周内其内容修改过,同时属主不为root ,也不是 postfix的文件    
+` find /etc  -not \( -group root -a -group postfix \) -mtime -7`       
 4、查找当前系统上没有属主或属组,且最近一个周内曾被访问过的文件   
 ` find /etc -nogroup -nouser -atime -7 `    
 5、查找/etc目录下大于1M且类型为普通文件的所有文件   
